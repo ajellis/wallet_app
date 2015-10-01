@@ -2,9 +2,16 @@
   <div align="center">
 
     <h1>Online Wallet</h1><br><br>
-    <h2>Use this program to keep track of your money and expenses</h2><br>
+    <h2>Use this program to keep track of your money and expenses</h2><br><br>
 
-    <p>The total amount of money you currently have is: </p>
+    :. The total amount of money you currently have is: <br>
+
+    :. Your total amount of transactions are: <%=@total_transactions%><br>
+
+    :. Your total amount of deopsits are: <%=@number_of_deposits%><br>
+
+    :. Your total amount of withdrawals are: <%=@number_of_withdraws%><br>
+
 
 
     <p><%= link_to 'New Transaction', new_transaction_path %><br><br>
