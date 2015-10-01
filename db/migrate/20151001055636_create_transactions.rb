@@ -1,7 +1,7 @@
 class CreateTransactions < ActiveRecord::Migration
   def change
     create_table :transactions do |t|
-      t.string :type
+      t.string :transaction_type
       t.string :receiver
       t.decimal :amount
 
