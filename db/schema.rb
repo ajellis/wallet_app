@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151001055745) do
+ActiveRecord::Schema.define(version: 20151001070325) do
 
   create_table "dashboards", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -19,11 +19,11 @@ ActiveRecord::Schema.define(version: 20151001055745) do
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.string   "type"
+    t.string   "transaction_type"
     t.string   "receiver"
     t.decimal  "amount"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
 end
