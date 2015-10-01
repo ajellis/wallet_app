@@ -1,20 +1,22 @@
 class Transaction < ActiveRecord::Base
 
-  self.inheritance_column = "inheritance_type"
+  def self.total
+  end
+
 
   def self.total_transactions
     self.count
   end
 
   def self.number_of_withdraws
-    self.all.select {|t| t.transaction_type == "Withdraw Money"}
+    self.all.select {|t| t.transaction_type == "Withdraw"}
   end
 
-  def self.number_of_deposits
-    self.all.select {|t| t.transaction_type == "Deposit Money"}
+  def self.umber_of_deposits
+    self.all.select {|t| t.transaction_type == "Deposit"}
   end
 
-  def self.most_spent
+  def most_spent
     withdraw.map{|t| t.amount}.sort.last
   end
 
